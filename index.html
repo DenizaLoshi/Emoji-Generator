@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emojis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- unicode: https://github.com/cheatsnake/emojihub -->
+
+    <div id="emoji-generator">
+        <h1>Loading Emoji...</h1>
+    </div>
+    <button onclick="emoji()">Get Random Emoji</button>
+
+    <script>
+    function emoji(){
+        fetch('https://emojihub.yurace.pro/api/random')
+        .then(response => response.json())
+        .then(emoji =>{
+            const emojiContainer = document.getElementById('emoji-generator');
+
+            emojiContainer.innerHTML = `
+            <h1> Name: ${emoji.name} </h1>
+            <p> Category: ${emoji.category} </p>
+            <p> Group: ${emoji.group} </p>
+            <p> HtmlCode: ${emoji.htmlCode} </p>
+            <p> Unicode: ${emoji.unicode} </p> 
+            `;
+        })
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body{
+    background-color: #ffffff;
+}
+
+#emoji-generator{
+    text-align: center;
+    margin-top: 50px;
+}
+
+button{
+    display: block;
+    font-size: 20px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #5ee1ff;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: #22776d;
+    color: white;
+}
+
+h1{
+    font-size: 37px;
+}
+
+p{
+    font-size: 25px;
+    margin: 5px 0px; 
+}
